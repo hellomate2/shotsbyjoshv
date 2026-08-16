@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80" width="480" height="80">
+  <text x="0" y="56"
+        font-family="Cormorant Garamond, Georgia, serif"
+        font-size="48"
+        font-weight="500"
+        fill="#0A0A0A"
+        letter-spacing="-1">Shots<tspan opacity="0.55" font-weight="300">By</tspan>JoshV</text>
+  <text x="402" y="56"
+        font-family="Cormorant Garamond, Georgia, serif"
+        font-size="48"
+        font-weight="400"
+        fill="#C9A96E"
+        font-style="italic">.</text>
+</svg>

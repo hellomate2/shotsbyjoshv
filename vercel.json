@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "crons": [
+    {
+      "path": "/api/seo/rank-snapshot",
+      "schedule": "0 13 * * 1"
+    }
+  ]
+}
