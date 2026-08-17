@@ -10,14 +10,14 @@ import { INSTAGRAM_URL } from "@/lib/constants";
 const useIsoLayoutEffect =
   typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
-// A tight, recognizable strip of recent work that clicks through to Instagram.
-// Thumbnails reuse portfolio photos already on the page, so no extra bytes on
-// slow connections beyond the smaller crops.
+// A tight, recognizable strip of recent posts that clicks through to
+// Instagram. These live in /photos/insta/ — refresh them now and then so the
+// strip matches what's actually on the feed.
 const STRIP = [
-  { src: "/photos/outdoor/04.jpg", alt: "Editorial outdoor portrait" },
-  { src: "/photos/sports/04.jpg", alt: "Polo player on horseback" },
-  { src: "/photos/cars/04.jpg", alt: "Car portrait at golden hour" },
-  { src: "/photos/events/01.jpg", alt: "Event coverage candid" },
+  { src: "/photos/insta/ig-2026-08-16.jpg", alt: "Dachshund grinning at an outdoor event" },
+  { src: "/photos/insta/ig-2026-06-17.jpg", alt: "Polo player mid-swing at Meadowbrook" },
+  { src: "/photos/insta/ig-2026-07-18.jpg", alt: "Golden-hour portrait on the lawn" },
+  { src: "/photos/insta/ig-2026-07-24b.jpg", alt: "Group portrait at a boutique event" },
 ];
 
 export function InstagramBand() {

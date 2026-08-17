@@ -287,6 +287,17 @@ export const SERVICE_PACKAGES: ServicePackages[] = [
 // to see a single category in full.
 // ============================================================================
 const GALLERY_RAW: GalleryImage[] = [
+  // Fresh from Instagram (@shotsbyjosh.v_llc), added Aug 2026. These are
+  // Instagram-resolution (640px) copies — if Josh sends the original exports,
+  // drop them over the same filenames in /photos/insta/ for a quality bump.
+  { id: "ig01", src: "/photos/insta/ig-2026-06-17.jpg", alt: "Polo player mid-swing at Meadowbrook", category: "Sports" },
+  { id: "ig02", src: "/photos/insta/ig-2026-07-18.jpg", alt: "Golden-hour portrait on the lawn", category: "Outdoor", span: "wide" },
+  { id: "ig03", src: "/photos/insta/ig-2026-08-16.jpg", alt: "Dachshund grinning at an outdoor event", category: "Events", span: "tall" },
+  { id: "ig04", src: "/photos/insta/ig-2026-05-24.jpg", alt: "Jericho athlete in front of the home crowd", category: "Sports", span: "wide" },
+  { id: "ig05", src: "/photos/insta/ig-2026-07-24b.jpg", alt: "Group portrait at a boutique event", category: "Events", span: "wide" },
+  { id: "ig06", src: "/photos/insta/ig-2026-04-27.jpg", alt: "Jericho lacrosse team raising their sticks", category: "Sports", span: "tall" },
+  { id: "ig07", src: "/photos/insta/ig-2026-07-24a.jpg", alt: "Puppy on the sidelines at the polo grounds", category: "Events", span: "tall" },
+
   // Row 1
   { id: "sp04", src: "/photos/sports/04.jpg", alt: "Polo player on horseback", category: "Sports", span: "tall" },
   { id: "out01", src: "/photos/outdoor/01.jpg", alt: "Outdoor portrait in natural light", category: "Outdoor" },
