@@ -490,3 +490,48 @@ These terms and conditions shall be governed by and construed in accordance with
 export const INSTAGRAM_URL = "https://www.instagram.com/shotsbyjosh.v_llc/";
 export const MEADOWBROOK_URL = "https://meadowbrookpoloclub.com/";
 export const CONTACT_EMAIL = "shotsbyjoshv.photography@gmail.com";
+
+// ============================================================================
+// FAQ — single source of truth for the homepage FAQ section AND the FAQPage
+// JSON-LD in app/layout.tsx. Keep answers factual and in sync with the
+// packages, RUSH_PRICING, hours, and TERMS_OF_SERVICE above.
+// ============================================================================
+export const FAQS: { question: string; answer: string }[] = [
+  {
+    question: "How do I book a session?",
+    answer:
+      "Tap Book Now anywhere on the site, pick your service and package, choose a date and time, and confirm. The whole thing takes about two minutes online. You can also email or DM on Instagram if you'd rather talk it through first.",
+  },
+  {
+    question: "How much does a photo session cost?",
+    answer:
+      "Sessions start at $75 for outdoor portraits, prom, and car photography, $100 for graduation, $200 for event coverage, and $250 for sports coverage. Every package shows exactly how long the session runs and how many edited photos are included before you book.",
+  },
+  {
+    question: "When will I get my photos?",
+    answer:
+      "Your fully edited gallery is delivered within 14 business days as an online link you can download and share. Need them faster? Add 48-hour rush delivery for $50 or 24-hour rush for $75 when you book.",
+  },
+  {
+    question: "How does payment work?",
+    answer:
+      process.env.NEXT_PUBLIC_CARD_PAYMENTS === "true"
+        ? "Pay securely online by card or Venmo when you book, or pay in person by cash or check at the session. Card and Venmo payments lock in your date immediately."
+        : "Pay the full session fee through Venmo when you book to lock in your date, or pay in person by cash or check at the session. Secure online card payments are coming soon.",
+  },
+  {
+    question: "Where do sessions happen?",
+    answer:
+      "Anywhere on Long Island. Josh is based in Jericho and shoots across Nassau and Suffolk County at a location you choose: parks, beaches, your home, your venue, or your favorite spot. Not sure where? He'll suggest a location that fits your session.",
+  },
+  {
+    question: "What hours are you available?",
+    answer:
+      "Sessions run seven days a week from 7 AM to 7 PM. Sunrise or late-evening sessions outside those hours are available for a $25 after-hours surcharge.",
+  },
+  {
+    question: "Can I reschedule or cancel?",
+    answer:
+      "Yes. Reschedule free up to 24 hours before your session, up to two times per booking, subject to availability. Requests within 24 hours of the session are treated as cancellations. The full cancellation policy is shown before you confirm any booking.",
+  },
+];

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { FAQS } from "@/lib/constants";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -202,6 +203,17 @@ const jsonLd = {
         addressCountry: "US",
       },
       sameAs: ["https://www.instagram.com/shotsbyjosh.v_llc/"],
+    },
+    {
+      // FAQ rich-result eligibility. Answers come from the same FAQS constant
+      // that renders the on-page FAQ section, so they can never drift apart.
+      "@type": "FAQPage",
+      "@id": "https://shotsbyjoshv.com/#faq",
+      mainEntity: FAQS.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
     },
   ],
 };

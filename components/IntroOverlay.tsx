@@ -80,6 +80,20 @@ export function IntroOverlay() {
     };
   }, [skip]);
 
+  // Failsafe: if the animation engine stalls (throttled background tabs,
+  // very slow devices), never leave the visitor trapped behind a black
+  // overlay with scroll locked. Hard-dismiss shortly after the timeline's
+  // expected ~2.4s runtime.
+  useEffect(() => {
+    if (skip !== false) return;
+    const failsafe = window.setTimeout(() => {
+      document.body.style.overflow = "";
+      sessionStorage.setItem(SESSION_KEY, "1");
+      if (overlayRef.current) overlayRef.current.style.display = "none";
+    }, 4500);
+    return () => window.clearTimeout(failsafe);
+  }, [skip]);
+
   if (skip === null) {
     // SSR/initial — render the overlay invisible-but-present so flash is avoided
     return (

@@ -13,6 +13,7 @@ export function Footer() {
     { label: "Services", href: "#services" },
     { label: "Portfolio", href: "#portfolio" },
     { label: "About", href: "#about" },
+    { label: "FAQ", href: "#faq" },
   ];
 
   return (
@@ -112,7 +113,15 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-3 text-white/45 text-[12.5px]">
+        {/* Service-area line: mirrors the areaServed cities in the JSON-LD so
+            local searches ("photographer syosset") have on-page text to match. */}
+        <p className="pt-8 text-center text-white/40 text-[12px] leading-relaxed tracking-wide">
+          Proudly serving Jericho · Syosset · Old Westbury · Woodbury ·
+          Plainview · Hicksville · Oyster Bay · Garden City · all of Nassau
+          &amp; Suffolk County, Long Island NY
+        </p>
+
+        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-white/45 text-[12.5px]">
           <p>© {new Date().getFullYear()} ShotsByJoshV. All rights reserved.</p>
           <p
             className="tracking-[0.28em] uppercase text-[0.62rem]"
